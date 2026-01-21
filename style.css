@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 625px;
     width: 100%;
 }
 
@@ -32,16 +32,16 @@ header {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.75rem;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -0.03em;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: var(--text);
 }
 
 .description {
-    font-size: 1.15rem;
+    font-size: 1.45rem;
     color: var(--secondary-text);
     margin-bottom: 30px;
 }
@@ -62,16 +62,16 @@ h1 {
 
 .instructions li {
     counter-increment: my-counter;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     display: flex;
     align-items: flex-start;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 .instructions li::before {
     content: counter(my-counter) ". ";
     font-weight: bold;
-    margin-right: 8px;
+    margin-right: 10px;
     color: var(--primary);
 }
 
@@ -79,8 +79,8 @@ h1 {
     background-color: var(--primary);
     color: white;
     border: none;
-    padding: 20px 30px;
-    font-size: 1.1rem;
+    padding: 24px 32px;
+    font-size: 1.35rem;
     font-weight: 600;
     border-radius: 12px;
     cursor: pointer;
@@ -94,7 +94,7 @@ h1 {
 }
 
 .transparency-note {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #999;
     margin-top: 60px;
     line-height: 1.4;
@@ -102,5 +102,9 @@ h1 {
 
 @media (max-width: 480px) {
     h1 { font-size: 1.8rem; }
+    .description { font-size: 1.15rem; }
+    .instructions li { font-size: 1rem; }
+    .button { font-size: 1.1rem; padding: 20px 30px; }
+    .transparency-note { font-size: 0.8rem; }
     body { padding: 40px 20px; }
 }
