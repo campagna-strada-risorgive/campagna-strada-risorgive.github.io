@@ -8,9 +8,12 @@ const subjects = [
 function sendEmail() {
     const now = new Date();
     const dateStr = now.toLocaleDateString('it-IT');
+    const timeStr = now.toLocaleTimeString('it-IT', { 
+        hour: '2-digit', 
+        minute: '2-digit' 
+    });
     const randomSubject = subjects[Math.floor(Math.random() * subjects.length)];
-    const subject = `${randomSubject} (${dateStr})`;
-    
+    const subject = `${randomSubject} (${dateStr} ore ${timeStr})`;
     const body = `Spettabili Enti competenti,
 
 con la presente segnalo il grave stato di dissesto della strada bianca e dei percorsi di accesso nell'area delle Risorgive del Bacchiglione a Villaverla.
@@ -21,10 +24,9 @@ Certo di un vostro riscontro, porgo cordiali saluti.
 [Firma l'email qui se desideri]
 
 ---
-Segnalazione inviata il ${dateStr}`;
+Segnalazione inviata il ${dateStr} alle ore ${timeStr}`;
 
     const recipient = "test@test.it";
     const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
     window.location.href = mailtoLink;
 }
