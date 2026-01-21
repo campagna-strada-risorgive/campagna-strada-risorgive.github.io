@@ -1,0 +1,106 @@
+:root {
+    --primary: #1a4314;
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --secondary-text: #666;
+    --border: #eaeaea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+}
+
+header {
+    margin-bottom: 32px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.description {
+    font-size: 1.15rem;
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+}
+
+.action-area {
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
+}
+
+.instructions {
+    margin-bottom: 30px;
+}
+
+.instructions ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+.instructions li {
+    counter-increment: my-counter;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+}
+
+.instructions li::before {
+    content: counter(my-counter) ". ";
+    font-weight: bold;
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.1s;
+    text-align: center;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.transparency-note {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 60px;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem; }
+    body { padding: 40px 20px; }
+}
